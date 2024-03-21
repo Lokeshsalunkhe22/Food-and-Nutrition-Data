@@ -10,9 +10,9 @@ app.use(express.json());
 app.use(cors());
 
 // Move the database connection setup to the top
-require("./db/conn");
+require("./conn");
 
-const food = require("./model/foodinfo");
+const food = require("./foodinfo");
 
 app.get("/", async (req, res) => {
   try {
